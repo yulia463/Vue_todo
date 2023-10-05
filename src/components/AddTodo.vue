@@ -1,27 +1,7 @@
 <template>
   <form @submit.prevent="onSubmit">
     <div class="information">
-      <div class="input-container">
-        <label for="name" class="input-label">Имя</label>
-        <input
-            type="text"
-            v-model="title"
-            id="name"
-            class="custom-input"
-            placeholder="Введите имя"
-        />
-      </div>
-      <div class="input-container">
-        <label for="name" class="input-label">Возраст</label>
-        <input
-            type="text"
-            v-model="title"
-            id="name"
-            class="custom-input"
-            placeholder="Введите возраст"
-        />
-      </div>
-
+      <template>From A: {{ store.count }}</template>
       <div class="btn">
         <button class="custom-button" type="submit">Добавить ребенка</button>
       </div>
@@ -93,6 +73,7 @@
 </template>
 
 <script>
+import { store } from './store.js'
 export default {
   data() {
     return {
@@ -119,17 +100,6 @@ export default {
 <style scoped>
 form {
   display: flex;
-}
-
-.input-container {
-  width: 616px;
-  height: 56px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 8px;
-  margin-bottom: 10px;
 }
 
 .input-container-small {

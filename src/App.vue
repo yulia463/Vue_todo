@@ -65,9 +65,8 @@
           </svg>
         </svg>
         <div class="header-links">
-          <p class="title">Форма </p>
-          <p class="title">Превью </p>
-
+          <router-link to="/" class="title">Форма </router-link>
+          <router-link to="/preview" class="title">Превью </router-link>
         </div>
 
       </div>

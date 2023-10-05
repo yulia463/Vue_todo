@@ -2,17 +2,19 @@
   <div>
     <div style=" display: flex; flex-direction: column; align-items: center; ">
 
-    <h3 style=" font-weight: normal">Персональные данные</h3>
-      <p style="display: flex; justify-content: center">Дети (Макс. 5)</p>
+      <h3 style=" font-weight: normal">Персональные данные</h3>
 
-    <AddTodo
-        @add-todo="addTodo"
-    />
+      <PersonalInformation/>
+
+      <AddTodo
+          @add-todo="addTodo"
+      />
+      <p style="display: flex; justify-content: center">Дети (Макс. 5)</p>
 
     </div>
     <router-link to="/">Home</router-link>
 
-    <Loader v-if="loading" />
+    <Loader v-if="loading"/>
     <TodoList
         v-else-if="filteredTodos.length"
         v-bind:todos="filteredTodos"
@@ -26,6 +28,8 @@
 import TodoList from '@/components/TodoList'
 import AddTodo from '@/components/AddTodo'
 import Loader from '@/components/Loader'
+import PersonalInformation from "@/components/PersonalInformation.vue";
+
 export default {
   name: 'app',
   data() {
@@ -37,14 +41,14 @@ export default {
   },
   mounted() {
     fetch('https://jsonplaceholder.typicode.com/todos?_limit=3')
-      .then(response => response.json())
-      .then(json => {
-        setTimeout(() => {
-          this.todos = json
-          this.loading = false
-        }, 1000)
+        .then(response => response.json())
+        .then(json => {
+          setTimeout(() => {
+            this.todos = json
+            this.loading = false
+          }, 1000)
 
-      })
+        })
   },
 
   computed: {
@@ -71,7 +75,7 @@ export default {
     }
   },
   components: {
-    TodoList, AddTodo, Loader
+    TodoList, AddTodo, Loader, PersonalInformation
   }
 }
 </script>
