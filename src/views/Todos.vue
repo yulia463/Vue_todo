@@ -1,17 +1,14 @@
 <template>
   <div>
-    <h2>Todo application</h2>
-    <router-link to="/">Home</router-link>
-    <hr>
+    <div style=" display: flex;justify-content: center; flex-direction: column; align-items: center; ">
+
+    <h2>Персональные данные</h2>
     <AddTodo
         @add-todo="addTodo"
     />
-    <select v-model="filter">
-      <option value="all">All</option>
-      <option value="completed">Completed</option>
-      <option value="not-completed">Not Completed</option>
-    </select>
-    <hr>
+    </div>
+    <router-link to="/">Home</router-link>
+
     <Loader v-if="loading" />
     <TodoList
         v-else-if="filteredTodos.length"
@@ -46,11 +43,7 @@ export default {
 
       })
   },
-  // watch: {
-  //   filter(value) {
-  //     console.log(value)
-  //   }
-  // },
+
   computed: {
     filteredTodos() {
       if (this.filter === 'all') {
