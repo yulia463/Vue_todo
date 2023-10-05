@@ -1,11 +1,14 @@
 <template>
   <div>
-    <div style=" display: flex;justify-content: center; flex-direction: column; align-items: center; ">
+    <div style=" display: flex; flex-direction: column; align-items: center; ">
 
-    <h2>Персональные данные</h2>
+    <h3 style=" font-weight: normal">Персональные данные</h3>
+      <p style="display: flex; justify-content: center">Дети (Макс. 5)</p>
+
     <AddTodo
         @add-todo="addTodo"
     />
+
     </div>
     <router-link to="/">Home</router-link>
 
