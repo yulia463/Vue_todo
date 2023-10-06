@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div style=" display: flex; flex-direction: column; align-items: center; ">
+    <div class="big-container" >
 
-      <h3 style=" font-weight: normal">Персональные данные</h3>
+      <h3 style=" font-weight: normal; display: flex" >Персональные данные</h3>
 
       <PersonalInformation/>
 
@@ -80,3 +80,11 @@ export default {
   }
 }
 </script>
+<style>
+.big-container{
+ display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 375px;
+}
+</style>
