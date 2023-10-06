@@ -1,7 +1,6 @@
 <template>
   <form @submit.prevent="onSubmit">
     <div class="information">
-      <template>From A: {{ store.count }}</template>
       <div class="btn">
         <button class="custom-button" type="submit">Добавить ребенка</button>
       </div>
@@ -73,7 +72,6 @@
 </template>
 
 <script>
-import { store } from './store.js'
 export default {
   data() {
     return {

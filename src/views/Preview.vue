@@ -1,9 +1,47 @@
 <template>
-  <div>
-    <h2>Home page</h2>
+  <div class="container">
+    <div style=" display: flex; flex-direction: column; align-items: center; ">
+      <h3 style=" font-weight: normal">Персональные данные</h3>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dignissimos eveniet excepturi expedita impedit numquam quae quas tenetur velit voluptas!</p>
+      <p style="font-weight: bold ; margin-bottom: 50px">Василий, 30 лет</p>
+      <p style="display: flex; justify-content: center">Дети</p>
 
-    <router-link to="/todos">Todos</router-link>
+      <div class="children-container">
+        <div v-for="(child, index) in children" :key="index">
+          <h4 class="child-info"> {{ child.name }}, {{ child.age }} лет</h4>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </template>
+<script setup>
+
+
+const children = [
+{ name: "Петр", age: 10 },
+{ name: "Василий", age: 14 },
+];
+</script>
+
+<style>
+.container{
+  display: flex;
+  margin: 50px 300px;
+}
+.children-container {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+}
+.child-info {
+  background-color:#F1F1F1;
+  margin: 8px 0;
+  padding: 5px 15px;
+  border-radius: 5px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+</style>
