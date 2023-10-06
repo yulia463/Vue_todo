@@ -1,7 +1,9 @@
 <template>
   <form @submit.prevent="onSubmit">
     <div class="information">
+
       <div class="btn">
+        <p class="children-and-btn">Дети (Макс. 5)</p>
         <button class="custom-button" type="submit">Добавить ребенка</button>
       </div>
 
@@ -108,8 +110,10 @@ form {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 8px;
-  margin-right: 20px;
+  margin-right: 18px;
   margin-bottom: 10px;
+  margin-left: 10px;
+
 }
 
 .input-label {
@@ -136,10 +140,14 @@ form {
 
 .btn {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
 }
 
-
+.children-and-btn{
+  display: flex;
+}
 .custom-button {
   width: 204px;
   height: 44px;

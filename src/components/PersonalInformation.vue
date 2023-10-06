@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <div class="input-container">
       <label for="name" class="input-label">Имя</label>
       <input
@@ -44,6 +44,11 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  display: flex;
+  flex-direction: column;
+
+}
 .input-container {
   width: 616px;
   height: 56px;

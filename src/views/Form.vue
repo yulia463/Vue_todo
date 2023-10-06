@@ -6,10 +6,11 @@
 
       <PersonalInformation/>
 
+
       <AddTodo
           @add-todo="addTodo"
       />
-      <p style="display: flex; justify-content: center">Дети (Макс. 5)</p>
+
 
     </div>
     <router-link to="/">Home</router-link>
