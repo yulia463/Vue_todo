@@ -47,6 +47,7 @@ export default {
 .container{
   display: flex;
   flex-direction: column;
+  border: 1px solid red;
 
 }
 .input-container {

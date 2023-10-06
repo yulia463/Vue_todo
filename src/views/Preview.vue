@@ -1,10 +1,10 @@
 <template>
   <div class="preview-container">
-    <div style=" display: flex; flex-direction: column; align-items: center; ">
+    <div style=" display: flex; flex-direction: column ">
       <h3 style=" font-weight: normal">Персональные данные</h3>
 
       <p style="font-weight: bold ; margin-bottom: 60px">Василий, 30 лет</p>
-      <p style="display: flex; justify-content: center">Дети</p>
+      <p style="display: flex">Дети</p>
 
       <div class="children-container">
         <div v-for="(child, index) in children" :key="index">
@@ -30,6 +30,7 @@ const children = [
   display: flex;
   margin: 30px 375px;
   align-items: flex-start;
+
 }
 .children-container {
   display: flex;
