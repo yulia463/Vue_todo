@@ -3,7 +3,7 @@
     <div style=" display: flex; flex-direction: column; align-items: center; ">
       <h3 style=" font-weight: normal">Персональные данные</h3>
 
-      <p style="font-weight: bold ; margin-bottom: 50px">Василий, 30 лет</p>
+      <p style="font-weight: bold ; margin-bottom: 60px">Василий, 30 лет</p>
       <p style="display: flex; justify-content: center">Дети</p>
 
       <div class="children-container">
@@ -28,7 +28,7 @@ const children = [
 <style>
 .container{
   display: flex;
-  margin: 50px 300px;
+  margin: 30px 375px;
 }
 .children-container {
   display: flex;
