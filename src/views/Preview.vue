@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="preview-container">
     <div style=" display: flex; flex-direction: column; align-items: center; ">
       <h3 style=" font-weight: normal">Персональные данные</h3>
 
@@ -26,9 +26,10 @@ const children = [
 </script>
 
 <style>
-.container{
+.preview-container{
   display: flex;
   margin: 30px 375px;
+  align-items: flex-start;
 }
 .children-container {
   display: flex;

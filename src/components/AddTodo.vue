@@ -141,11 +141,13 @@ form {
 .btn {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 25px;
+  align-items: baseline;
 
 }
 
 .children-and-btn{
+
   display: flex;
 }
 .custom-button {
